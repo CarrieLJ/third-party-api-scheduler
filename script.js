@@ -33,4 +33,9 @@ function currentTime (){
 //in order to execute, call it outside of the function
 currentTime();
 //every 15 seconds this timer runs through our function
-var interval=setInterval(currentTime, 15000)
+var interval=setInterval(currentTime, 15000);
+
+//review times in javascript
+//create function event.listenter on save button
+//create local storage get item for key (hour) and value(text
+
