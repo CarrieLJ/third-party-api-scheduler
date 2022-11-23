@@ -71,3 +71,10 @@ saveBtn.addEventListener("click", function() {
         console.log(userText);
     
 });
+// localStorage.setItem('hour', 'time-block');
+// localStorage.setItem('description', 'text');
+
+// var hour = localStorage.getItem('hour');
+// var description = localStorage.getItem('description');
+
+// var items = localStorage.length;
