@@ -1,13 +1,7 @@
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM DD, YYYY"));
+var userTasks = $('.saveBtn');
 
-// var timeblock = moment()
-// $("#timeblocks").text(today.format("H"));
-
-// moment().get('year');
-// moment().get('month'); // 0 to 11
-// moment().get('date');
-// moment().get('hour');
 
 //to figure out the past, present, and future of our timeblocks
 function currentTime (){
@@ -35,42 +29,52 @@ currentTime();
 //every 15 seconds this timer runs through the function
 var interval = setInterval(currentTime, 15000);
 
-//review times in javascript
 //create function event.listenter on save button
+//click the save button
+userTasks.on('click', function () {
+    // if (isDark) {
+    //   $('body').css({ 'background-color': '#d9e9e8', color: '#1a1a1a' });
+    //   isDark = !isDark;
+    // } else {
+    //   $('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
+    //   isDark = !isDark;
+    // }
+  });
+// function saveDescription(event) {
+//     var btn = event.target;
+    // btn.addEventListener(event) {
+    // document.getElementById("text").querySelectorAll("#text");
+    // console.log (text);
+    
+
+    // localStorage.setItem(time-block, description);
+    // console.log(description);
+
+
+
+
+
+
 // var saveBtn = document.querySelector(".fa-solid fa-floppy-disk");
 // saveBtn.addEventListener("click");
 //create local storage get item for key (hour) and value(text
 
 
 // if (window.localStorage) {
-//     // var savedHour = document.getElementById ('hour')
-//     var userText = document.getElementById('text');
 
-//     // savedHour.value = localStorage.getItem('hour');
-//     userText.value = localStorage.getItem('text');
+// if (window.localStorage["text"]) {
+    // var text = localStorage["text"];
+    // console.log (text);
+    // var btn = document.querySelectorAll('.saveBtn');
+    // document.getElementById("text").value = text;
+    // console.log(text);
+// }; 
 
-//     // savedHour.addEventListener('input', function() {
-//     //     localStorage.setItem('text', userText.value);
-//     //     console.log(text);
-//     // })
-
-//     userText.addEventListener('input', function() {
-//         localStorage.setItem('text', userText.value);
-//         console.log(text);
-//     })
-// }
-
-if (window.localStorage["text"]) {
-    var text = localStorage["text"];
-    var btn = document.querySelector('.saveBtn');
-    document.getElementById("text").value = text;
-}; 
-saveBtn.addEventListener("click", function() {
-        var userText = document.getElementById("text").value;
-        localStorage.setItem("text", userText);
-        console.log(userText);
+//         var userText = document.getElementById("text").value;
+//         localStorage.setItem("text", userText);
+//         console.log(userText);
     
-});
+// });
 // localStorage.setItem('hour', 'time-block');
 // localStorage.setItem('description', 'text');
 
