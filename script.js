@@ -37,7 +37,23 @@ var interval = setInterval(currentTime, 15000);
 
 //review times in javascript
 //create function event.listenter on save button
-var saveBtn = document.querySelector(".fa-solid fa-floppy-disk");
-saveBtn.addEventListener("click");
+// var saveBtn = document.querySelector(".fa-solid fa-floppy-disk");
+// saveBtn.addEventListener("click");
 //create local storage get item for key (hour) and value(text
+if (window.localStorage) {
+    // var savedHour = document.getElementById ('hour')
+    var userText = document.getElementById('text');
 
+    // savedHour.value = localStorage.getItem('hour');
+    userText.value = localStorage.getItem('text');
+
+    // savedHour.addEventListener('input', function() {
+    //     localStorage.setItem('text', userText.value);
+    //     console.log(text);
+    // })
+
+    userText.addEventListener('input', function() {
+        localStorage.setItem('text', userText.value);
+        console.log(text);
+    })
+}
