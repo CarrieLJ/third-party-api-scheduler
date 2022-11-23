@@ -40,20 +40,34 @@ var interval = setInterval(currentTime, 15000);
 // var saveBtn = document.querySelector(".fa-solid fa-floppy-disk");
 // saveBtn.addEventListener("click");
 //create local storage get item for key (hour) and value(text
-if (window.localStorage) {
-    // var savedHour = document.getElementById ('hour')
-    var userText = document.getElementById('text');
 
-    // savedHour.value = localStorage.getItem('hour');
-    userText.value = localStorage.getItem('text');
 
-    // savedHour.addEventListener('input', function() {
-    //     localStorage.setItem('text', userText.value);
-    //     console.log(text);
-    // })
+// if (window.localStorage) {
+//     // var savedHour = document.getElementById ('hour')
+//     var userText = document.getElementById('text');
 
-    userText.addEventListener('input', function() {
-        localStorage.setItem('text', userText.value);
-        console.log(text);
-    })
-}
+//     // savedHour.value = localStorage.getItem('hour');
+//     userText.value = localStorage.getItem('text');
+
+//     // savedHour.addEventListener('input', function() {
+//     //     localStorage.setItem('text', userText.value);
+//     //     console.log(text);
+//     // })
+
+//     userText.addEventListener('input', function() {
+//         localStorage.setItem('text', userText.value);
+//         console.log(text);
+//     })
+// }
+
+if (window.localStorage["text"]) {
+    var text = localStorage["text"];
+    var btn = document.querySelector('.saveBtn');
+    document.getElementById("text").value = text;
+}; 
+saveBtn.addEventListener("click", function() {
+        var userText = document.getElementById("text").value;
+        localStorage.setItem("text", userText);
+        console.log(userText);
+    
+});
