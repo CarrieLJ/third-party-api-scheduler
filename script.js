@@ -8,8 +8,21 @@ $('.saveBtn').on('click', function(){
     var hourBox = $(this).parent().attr('id');
 //need to do a DOM traversal to move where we want within the html
     localStorage.setItem(hourBox, textBox);
-    console.log(hourBox);  
-})
+    // console.log(textBox);  
+
+    var hourBox = localStorage.getItem(hourBox);
+    var items = localStorage.length;
+    // function getSavedText() {
+    //     var storedText = JSON.stringify(localStorage.getItem("textBox"));
+    //     if (storedText !== null) {
+    //         textBox = storedText;
+    //     }
+    // }
+
+    // getSavedText();
+    console.log(hourBox);
+    // var savedText = localStorage.length;
+});
 
 
 
@@ -35,12 +48,12 @@ function currentTime (){
     });
 }
 
-
-
 //in order to execute, call it outside of the function
 currentTime();
 // //every 15 seconds this timer runs through the function
-// var interval = setInterval(currentTime, 15000);
+var interval = setInterval(currentTime, 15000);
+
+
 
 //create function event.listenter on save button
 //click the save button
